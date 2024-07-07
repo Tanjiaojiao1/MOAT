@@ -39,7 +39,9 @@ ln -s /path/to/cityscapes/dataset data/cityscapes
 
 ## Training
 
+```base
 sh scripts/train_UDA.sh
+```
 
 ## Acknowledgments
 
