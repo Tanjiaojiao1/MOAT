@@ -1,0 +1,9 @@
+#python3 scripts/train_OSDA_max.py --source_dataset gta5 --num_classes 19 --backbone resnet101 --round_num 50 --lr 2.5e-5 --lambda_cluster 0. --lambda_ortho 0. --lambda_sparse 0 --lambda_entropy 0.1 --target_crop_size 1024,512 --crop_size 1280,720 --checkpoint_dir ./log_param/gta2city_OSDA_mixstyle_beta_0.5_proto_mom0.99_max_k1004_lr5_seed48 --pretrained_ckpt_file ./pretrained_model/GTA5_source.pth --use_proto True
+
+python3 scripts/train_OSDA_max.py --source_dataset synthia --num_classes 16 --backbone resnet101 --round_num 50 --lr 2.5e-5 --lambda_cluster 0. --lambda_ortho 0. --lambda_sparse 0 --lambda_entropy 0.1 --target_crop_size 1024,512 --crop_size 1280,720 --checkpoint_dir ./log_param/synthia2city_OSDA_uncerstyle_beta_0.5_proto0.99_k10050_lr5_seed48 --seed 48 --pretrained_ckpt_file ./pretrained_model/synthiabest.pth --use_proto True
+
+#python tools/train_OSDA_ttt.py --source_dataset gta5 --num_classes 19 --backbone resnet101 --round_num 25000 --lr 2.5e-4 --lambda_cluster 0. --lambda_ortho 0. --lambda_sparse 0. --lambda_entropy 0.1 --target_crop_size 1024,512 --crop_size 1280,720 --checkpoint_dir ./log/gta2city_OSDA_k13_mmd10_All --pretrained_ckpt_file ./pretrained_model/gta5final.pth
+
+#python tools/train_OSDA_ttt.py --source_dataset synthia --num_classes 16 --backbone resnet101 --round_num 15 --lr 2.5e-4 --lambda_cluster 0. --lambda_ortho 0. --lambda_sparse 0. --lambda_entropy 0.1 --target_crop_size 1024,512 --crop_size 1280,760 --checkpoint_dir ./log/syn2city_OSDA_k12_ent0.1_dis_best --pretrained_ckpt_file ./pretrained_model/synthiabest.pth
+
+#python tools/train_OSDA_ttt.py --source_dataset synthia --num_classes 16 --backbone resnet101 --round_num 25000 --lr 2.5e-4 --lambda_cluster 0. --lambda_ortho 0. --lambda_sparse 0. --lambda_entropy 0.1 --target_crop_size 1024,512 --crop_size 1280,760 --checkpoint_dir ./log/syn2city_OSDA_k12_mmd10_All --pretrained_ckpt_file ./pretrained_model/synthiabest.pth
